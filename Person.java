@@ -1,4 +1,4 @@
-package com.zipcodewilmington;
+ 
 
 /**
  * Created by leon on 1/24/18.
@@ -10,6 +10,7 @@ public class Person {
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        
     }
 
     public String getFirstName() {

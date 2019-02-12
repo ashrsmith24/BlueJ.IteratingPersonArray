@@ -1,4 +1,4 @@
-package com.zipcodewilmington;
+ 
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -31,8 +31,17 @@ public class PersonHandlerTest {
     @Test
     public void testWhileLoop() {
         // : When
-        String actual = personHandler.whileLoop();
-
+        Person person1 = new Person("Leon", "Hunter");
+        Person person2 = new Person("Tariq", "Hook");
+        Person person3 = new Person("Dolio", "Durant");
+        Person[] personArray = {person1, person2, person3};
+        String actual = personHandler.whileLoop(personArray);
+        this.expected = "\nMy first name is Leon\n" +
+                "My last name is Hunter\n" +
+                "My first name is Tariq\n" +
+                "My last name is Hook\n" +
+                "My first name is Dolio\n" +
+                "My last name is Durant";
         // : Then
         Assert.assertEquals(expected, actual);
     }
